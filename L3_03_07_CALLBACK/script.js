@@ -63,7 +63,7 @@ function placeOrder(price,noOfItems,cb){
 }
 function orderPayment(orderId,price,noOfItems,cb){
     console.log("Payment is successful");
-    cb(orderId,price,noOfItems)
+    cb(orderId,price,noOfItems);
 }
 function orderStatus(orderId,price,noOfItems){
     console.log("Order Details:");
