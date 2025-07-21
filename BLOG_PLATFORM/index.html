@@ -3,53 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG</title>
+    <title>Blog Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">Block Page</div>
-        <ul class="nav-links">
-        <ul>
-            <li><a href=#Home>Home</a></li>
-            <li><a href=#Blogs>Blogs</a></li>
-            <li><a href=#Admin>Admin</a></li>
-        </ul>
+        <div class="container">
+            <a href="#" class="logo">Blog Page</a>
+            <div class="nav-links">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#blogs" class="nav-link">Blogs</a>
+                <a href="#admin" class="nav-link">Admin Panel</a>
+            </div>
+        </div>
     </nav>
 
-    <section id="Home">
-        <h1>Welcome to the Block Page</h1>
-    </section>
-
-    <section id="Blogs">
-        <h2>Blogs</h2">
-        <input type="text" id="search" placeholder="Search by title..."/>
-        <div class="filters">
-            <select id="categoryFilter">
-                <option value="">All Categories</option>
-                <option value="tech">Tech</option>
-                <option value="lifestyle">Lifestyle</option>
-
-            </select>
-            <select id="sortDate">
-                <option value="">Sort By</option>
-                <option value="asc">Oldest First</option>
-                <option value="desc">Newest First</option>
-            </select>
+    <header class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to Bubbly Blog Haven</h1>
+            <p>Explore our collection of insightful articles on web development, programming, and design</p>
+            <a href="#blogs" class="btn">Browse Blogs</a>
         </div>
-        <div id="blogList"></div>
-    </section>
-    <section id="Admin">
-        <h2>Admin Panel</h2>
-        <div class="block">Block 1</div>
-        <div class="block">Block 2</div>
-        <div class="block">Block 3</div>
-        <input type="text" id="author" placeholder="Published by author"/>
-        <button id="sendBtn">Send</button>
+    </header>
 
+    <section class="blogs-section" id="blogs">
+        <div class="container">
+            <h2>All Blogs</h2>
+            <p class="section-description">Browse through our collection of articles</p>
+            
+            <div class="filters">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search blogs...">
+                </div>
+                <div class="filter-container">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="React">React</option>
+                        <option value="TypeScript">TypeScript</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                    <select id="sort-filter">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <p id="blog-count" class="blog-count">Showing 5 of 5 blogs</p>
+            
+            <div class="blog-grid" id="blog-grid">
+                <!-- Blog cards will be dynamically inserted here -->
+            </div>
+        </div>
     </section>
-        
-    
-<script src="script.js"></script>
+
+    <section class="blog-detail" id="blog-detail">
+        <div class="container">
+            <button class="btn back-btn" id="back-to-blogs">← Back to Blogs</button>
+            <div class="blog-content" id="blog-content">
+                <!-- Blog detail will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-section" id="admin">
+        <div class="container">
+            <h2>Admin Panel</h2>
+            <p class="section-description">Create and manage blog posts</p>
+            
+            <form id="blog-form" class="blog-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" rows="10" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="url">URL (optional)</label>
+                        <input type="url" id="url">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Blog</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Bubbly Blog Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
