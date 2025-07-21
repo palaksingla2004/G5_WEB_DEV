@@ -1,0 +1,32 @@
+body{
+    margin:0
+}
+.navbar{
+    background: #333;
+    color:white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-links li a{
+    color:white;
+    text-decoration: none;
+}
+section{
+    padding: 20px;
+}
+input,select,button{
+    padding:8px;
+    margin:10px 5px;
+}
+.block{
+    background: white;
+    margin: 10px 0;
+    padding:20px;
+}
