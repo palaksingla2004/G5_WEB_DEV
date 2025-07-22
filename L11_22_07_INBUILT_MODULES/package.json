@@ -1,0 +1,14 @@
+{
+  "name": "l11_22_07_inbuilt_modules",
+  "version": "1.0.0",
+  "main": "filesystem.js",
+  
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": ""
+}
