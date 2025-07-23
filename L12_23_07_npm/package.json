@@ -1,0 +1,22 @@
+{
+  "name": "@palak2004/g5_npm_package",
+  "version": "1.0.1",
+  "description": "This is my 1st npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palaksingla2004/G5_WEB_DEV.git"
+  },
+  "bugs": {
+    "url": "https://github.com/palaksingla2004/G5_WEB_DEV/issues"
+  },
+  "homepage": "https://github.com/palaksingla2004/G5_WEB_DEV#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5"
+  }
+}
