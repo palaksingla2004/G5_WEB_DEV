@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Long Polling</title>
+</head>
+<body>
+  <div id="main-container"></div>
+  <script>
+
+      try {
+        async function 
+        const response = await fetch("/getname");
+        const data = await response.json();
+        longPolling();
+      } catch (err) {
+        console.error("Error in long polling:", err);
+        setTimeout(longPolling, 2000);
+      }
+    }
+
+    longPolling();
+  </script>
+</body>
+</html>
